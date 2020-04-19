@@ -13,10 +13,10 @@ export default function Section({
 }) {
   return (
     <section>
-      <div className="row">
+      <div className="content">
         <h2>{header}</h2>
         <h3>{subheader}</h3>
-        <div className="column">{children}</div>
+        <div className="row">{children}</div>
       </div>
       <style jsx>{`
         section {

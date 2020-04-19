@@ -1,6 +1,12 @@
-const Banner = ({ imageUrl, children }) => (
+const Banner = ({
+  imageUrl,
+  children,
+}: {
+  imageUrl: string;
+  children: JSX.Element[];
+}) => (
   <section id="banner">
-    <div className="row">{children}</div>
+    <div className="content">{children}</div>
     <style jsx>{`
       #banner {
         background-image: url(${imageUrl});

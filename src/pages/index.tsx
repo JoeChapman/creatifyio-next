@@ -1,6 +1,6 @@
 import Layout from "../components/Layout";
 import Section from "../components/Section";
-import Box from "../components/Box";
+import ServiceBox from "../components/ServiceBox";
 import ClientBox from "../components/ClientBox";
 import Banner from "../components/Banner";
 import ToolBox from "../components/ToolBox";
@@ -39,7 +39,10 @@ export default function Index() {
           header="Our Services"
           subheader="Skills and experience we bring"
         >
-          <Box header="Web Development" imageUrl="/images/icons/develop-y.svg">
+          <ServiceBox
+            header="Web Development"
+            imageUrl="/images/icons/develop-y.svg"
+          >
             <p>
               We have over 15 years' experience developing software for the Web,
               and the infrastructure and tooling to support it; including
@@ -47,16 +50,22 @@ export default function Index() {
               believe in the open-source community and benefit from all its
               advantages, support and learning.
             </p>
-          </Box>
-          <Box header="Cloud Engineering" imageUrl="/images/icons/cloud-y.svg">
+          </ServiceBox>
+          <ServiceBox
+            header="Cloud Engineering"
+            imageUrl="/images/icons/cloud-y.svg"
+          >
             <p>
               As cloud engineers we evangelise DevOps best practices, with
               senior commercial experience covering everything from identity and
               access management, through container orchestration to service
               monitoring.
             </p>
-          </Box>
-          <Box header="Agile Delivery" imageUrl="/images/icons/user-y.svg">
+          </ServiceBox>
+          <ServiceBox
+            header="Agile Delivery"
+            imageUrl="/images/icons/user-y.svg"
+          >
             <p>
               Our goal is to understand your what your users need so you can
               give them what they want and keep them coming back. We believe
@@ -65,8 +74,8 @@ export default function Index() {
               could be more bums-on-seats, or the discovery of ways to employ
               the skills you already have.
             </p>
-          </Box>
-          <Box
+          </ServiceBox>
+          <ServiceBox
             header="Support & Maintenance"
             imageUrl="/images/icons/support-y.svg"
           >
@@ -77,7 +86,7 @@ export default function Index() {
               can maintain or migrate your legacy services and data to a new
               platform.
             </p>
-          </Box>
+          </ServiceBox>
         </Section>
         <Section
           header="Our Work"
@@ -87,29 +96,44 @@ export default function Index() {
           <ClientBox
             imageAlt="Savvy Property Technology"
             imageUrl="/images/logos/savvy.png"
-            text="We redeveloped a Mobile App and Web App for a work-based social
-            network, deployed multiple services to Kubernetes on AWS and
-            integrated the pipeline with Datadog to monitor the logs and
-            performance"
-          />
+          >
+            <p>
+              We redeveloped a Mobile App and Web App for a work-based social
+              network, deployed multiple services to Kubernetes on AWS and
+              integrated the pipeline with Datadog to monitor the logs and
+              performance
+            </p>
+          </ClientBox>
           <ClientBox
             imageAlt="Home Office"
             imageUrl="/images/logos/home-office.png"
-            text="Lead the development of multiple digital services through the GDS
-            service assessments embedded in a multi-disicplinary Agile team. Open-sourced design-patterns and developed Home Office Forms"
-          />
+          >
+            <p>
+              Lead the development of multiple digital services through the GDS
+              service assessments embedded in a multi-disicplinary Agile team.
+              Open-sourced design-patterns and developed Home Office Forms
+            </p>
+          </ClientBox>
           <ClientBox
             imageAlt="Old Mutual"
             imageUrl="/images/logos/old-mutual.png"
-            text="Engaged with senior stakeholders to transform elements of their
-            business, leading to developing and productionising a
-            content-discovery Chatbot and internal Lead Tracker service"
-          />
+          >
+            <p>
+              Engaged with senior stakeholders to transform elements of their
+              business, leading to developing and productionising a
+              content-discovery Chatbot and internal Lead Tracker service
+            </p>
+          </ClientBox>
           <ClientBox
             imageAlt="British Gas"
             imageUrl="/images/logos/british-gas.png"
-            text="Helped British Gas develop and release the first edition of the Web App for Hive home thermostat. Created an accessible online thermostat control, brochure site and pyament portal integration"
-          />
+          >
+            <p>
+              Helped British Gas develop and release the first edition of the
+              Web App for Hive home thermostat. Created an accessible online
+              thermostat control, brochure site and pyament portal integration
+            </p>
+          </ClientBox>
         </Section>
         <Section
           header="Our tools"

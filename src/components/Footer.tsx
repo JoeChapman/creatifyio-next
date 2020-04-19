@@ -3,11 +3,11 @@ import FootNote from "./FootNote";
 
 const Footer = () => (
   <footer>
-    <div className="row">
-      <div className="column">
+    <div className="content">
+      <div className="row">
         <img src="/images/cre-logo-b.svg" />
       </div>
-      <div className="column">
+      <div className="row">
         <nav>
           <ul>
             <li>
@@ -28,7 +28,7 @@ const Footer = () => (
           </ul>
         </nav>
       </div>
-      <div className="column">
+      <div className="row">
         <ul>
           <li>
             <a href="./cookies">Cookie Policy</a>
@@ -39,8 +39,8 @@ const Footer = () => (
         </ul>
       </div>
     </div>
-    <div className="row">
-      <div className="column">
+    <div className="content">
+      <div className="row">
         <FootNote
           address="Registered Office: First Floor, Telecom House, 125-135 Preston Road, Brighton, East Sussex, BN1 6AF."
           company="Company limited by guarantee in England and Wales, Company number: 07614146"

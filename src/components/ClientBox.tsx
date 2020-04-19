@@ -1,18 +1,23 @@
-import Box from "./Box";
-
 export default function ClientBox({
   imageAlt,
   imageUrl,
-  text
+  children
 }: {
   imageAlt: string;
   imageUrl: string;
-  text: string;
+  children: JSX.Element;
 }) {
   return (
-    <Box imageAlt={imageAlt} imageUrl={imageUrl}>
-      <p>{text}</p>
+    <div className="box">
+      <h3>
+        <img src={imageUrl} alt={imageAlt} />
+      </h3>
+      {children}
       <style jsx>{`
+        .box {
+          width: 45%;
+          min-width: 250px;
+        }
         h3 {
           color: #1e3246;
           text-align: center;
@@ -21,13 +26,6 @@ export default function ClientBox({
           height: 75px;
         }
       `}</style>
-    </Box>
-    // <div className="box">
-    //   <h3>
-    //     <img src={imageUrl} alt={header} />
-    //   </h3>
-    //   <p>{text}</p>
-
-    // </div>
+    </div>
   );
 }

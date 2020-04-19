@@ -1,27 +1,18 @@
-export default function Box({
+export default function ServiceBox({
   header,
   imageUrl,
-  imageAlt,
   children
 }: {
-  header?: string;
-  imageUrl?: string;
-  imageAlt?: string;
-  children: JSX.Element | JSX.Element[];
+  header: string;
+  imageUrl: string;
+  children: JSX.Element;
 }) {
   return (
     <div className="box">
-      {header && (
-        <h3>
-          {imageUrl && <img src={imageUrl} alt={imageAlt} />}
-          <span>{header}</span>
-        </h3>
-      )}
-      {imageUrl && (
-        <h3>
-          <img src={imageUrl} alt={imageAlt} />
-        </h3>
-      )}
+      <h3>
+        <img src={imageUrl} alt={header} />
+        <span>{header}</span>
+      </h3>
       {children}
       <style jsx>{`
         .box {

@@ -1,16 +1,14 @@
-import { ReactNode } from "react";
-
 export default function ToolBox({
   header,
   imageUrl,
-  text
+  text,
 }: {
   header: string;
   imageUrl: string;
   text?: string;
 }) {
   return (
-    <div className="box three">
+    <div className="box">
       <h3>
         <img src={imageUrl} alt={header} />
       </h3>

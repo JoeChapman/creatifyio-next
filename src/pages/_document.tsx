@@ -11,6 +11,10 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel="shortcut icon" href="/images/favicon.svg" />
+          <meta
+            name="viewport"
+            content="initial-scale=1.0, width=device-width"
+          />
         </Head>
         <body>
           <Main />

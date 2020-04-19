@@ -4,13 +4,13 @@ import CookieConsent from "react-cookie-consent";
 
 const layoutStyle = {
   margin: 0,
-  padding: 0
+  padding: 0,
 };
 
-const Layout = props => (
+const Layout = ({ children }: { children: JSX.Element }) => (
   <div style={layoutStyle}>
     <Header />
-    {props.children}
+    {children}
     <style jsx global>{`
       body {
         margin: 0;
@@ -31,12 +31,12 @@ const Layout = props => (
       main {
         margin-top: 85px;
       }
-      .column {
+      .row {
         flex-flow: row wrap;
         display: flex;
         justify-content: space-between;
       }
-      .row {
+      .content {
         width: 65%;
         margin: 0 auto;
       }

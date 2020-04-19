@@ -1,15 +1,15 @@
 import Link from "next/link";
-import Nav from "./Nav";
+import Navigation from "./Navigation";
 
 const Header = () => (
   <header>
-    <div className="column row">
+    <div className="content row">
       <Link href="/">
         <a id="logo" title="Home page">
           <img src="/images/cre-logo-g.svg" width="220px" alt="Creatify ltd" />
         </a>
       </Link>
-      <Nav />
+      <Navigation />
     </div>
     <style jsx>{`
       header {
@@ -19,9 +19,8 @@ const Header = () => (
         height: 85px;
         background-color: #1e3246;
       }
-
-      header #logo {
-        display: flex;
+      .content {
+        position: relative;
       }
     `}</style>
   </header>
