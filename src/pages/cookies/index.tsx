@@ -1,7 +1,6 @@
 import Layout from "../../components/Layout";
 import Banner from "../../components/Banner";
 import Section from "../../components/Section";
-import Box from "../../components/Box";
 
 export default function Index() {
   return (

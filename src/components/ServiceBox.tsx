@@ -1,7 +1,7 @@
 export default function ServiceBox({
   header,
   imageUrl,
-  children
+  children,
 }: {
   header: string;
   imageUrl: string;
@@ -17,7 +17,7 @@ export default function ServiceBox({
       <style jsx>{`
         .box {
           width: 45%;
-          min-width: 250px;
+          min-width: 280px;
         }
         h3 {
           color: #1e3246;
@@ -26,8 +26,7 @@ export default function ServiceBox({
           margin-bottom: 0;
         }
         img {
-          margin-left: -21px;
-          width: 7rem;
+          width: 5rem;
           height: 50px;
           vertical-align: bottom;
         }

@@ -1,13 +1,26 @@
 export default function FootNote({
   address,
-  company
+  company,
 }: {
   address: string;
   company: string;
 }) {
   return (
-    <p>
-      © Creatify Ltd {address} {company}
-    </p>
+    <div className="content row">
+      <p>
+        © Creatify Ltd {address} {company}
+      </p>
+      <style jsx>
+        {`
+          div {
+            margin-top: 200px;
+          }
+          p {
+            font-size: 80%;
+            margin: 0 auto;
+          }
+        `}
+      </style>
+    </div>
   );
 }

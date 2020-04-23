@@ -1,25 +1,38 @@
 export default function ToolBox({
   header,
   imageUrl,
-  text,
+  title,
+  children,
 }: {
   header: string;
   imageUrl: string;
-  text?: string;
+  title?: string;
+  children?: JSX.Element;
 }) {
   return (
     <div className="box">
       <h3>
         <img src={imageUrl} alt={header} />
+        <span>{title}</span>
       </h3>
-      <p>{text}</p>
+      {children}
       <style jsx>{`
+        .box {
+          width: 25%;
+          min-width: 260px;
+          text-align: center;
+        }
         h3 {
           color: #1e3246;
+          width: auto;
+          height: auto;
+          max-width: 150px;
+          margin: 0 auto;
           text-align: center;
         }
         img {
-          height: 75px;
+          height: auto;
+          width: 150px;
         }
       `}</style>
     </div>

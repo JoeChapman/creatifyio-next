@@ -35,10 +35,7 @@ export default function Index() {
             }
           `}</style>
         </Banner>
-        <Section
-          header="Our Services"
-          subheader="Skills and experience we bring"
-        >
+        <Section header="Our Services" subheader="What we do">
           <ServiceBox
             header="Web Development"
             imageUrl="/images/icons/develop-y.svg"
@@ -67,12 +64,10 @@ export default function Index() {
             imageUrl="/images/icons/user-y.svg"
           >
             <p>
-              Our goal is to understand your what your users need so you can
-              give them what they want and keep them coming back. We believe
-              through collaboration and iteratively testing and refining
-              together we will develop the solution to your business needs. That
-              could be more bums-on-seats, or the discovery of ways to employ
-              the skills you already have.
+              Our goal is to understand what your users need, so they'll want to
+              keep them coming back. We believe with collaboration and
+              iteratively testing and refining, we'll develop the product most
+              appropriate for your requirements.
             </p>
           </ServiceBox>
           <ServiceBox
@@ -89,8 +84,8 @@ export default function Index() {
           </ServiceBox>
         </Section>
         <Section
-          header="Our Work"
-          subheader="Clients we've helped"
+          header="Our Clients"
+          subheader="Who we've helped"
           background="#d6dce2"
         >
           <ClientBox
@@ -135,19 +130,39 @@ export default function Index() {
             </p>
           </ClientBox>
         </Section>
-        <Section
-          header="Our tools"
-          subheader="Software, platforms and tools for online solutions"
-        >
-          <ToolBox header="AWS" imageUrl="/images/logos/aws.svg" />
+        <Section header="The Tech Bit" subheader="Software we use">
+          <ToolBox header="AWS" imageUrl="/images/logos/aws.svg">
+            <p>
+              Reliable, secure and cost-effective platform designed to be
+              scalable and highly-performant.
+            </p>
+          </ToolBox>
           <ToolBox
+            title="ReactJS"
+            header="ReactJS"
+            imageUrl="/images/logos/react.svg"
+          >
+            <p>
+              ReactJS allows us to build blazing-fast user interfaces in a
+              highly-scalable style.
+            </p>
+          </ToolBox>
+          <ToolBox header="Node.js" imageUrl="/images/logos/nodejs.svg">
+            <p>
+              JavaScript on the server means our teams can work be truly
+              fullstack developers
+            </p>
+          </ToolBox>
+
+          <ToolBox
+            title="Kubernetes"
             header="Kubernetes"
             imageUrl="/images/logos/kubernetes.svg"
-          />
-          <ToolBox header="Node.js" imageUrl="/images/logos/nodejs.svg" />
-          <ToolBox header="ReactJS" imageUrl="/images/logos/react.svg" />
+          >
+            <p>Scale resources and applications in real time.</p>
+          </ToolBox>
         </Section>
-        <Banner imageUrl="/images/cre-illustrations-2.svg">
+        <Banner id="contact-us" imageUrl="/images/cre-illustrations-2.svg">
           <h2>Contact us</h2>
           <p>
             Email{" "}

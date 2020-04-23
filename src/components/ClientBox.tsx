@@ -1,7 +1,7 @@
 export default function ClientBox({
   imageAlt,
   imageUrl,
-  children
+  children,
 }: {
   imageAlt: string;
   imageUrl: string;
@@ -16,14 +16,19 @@ export default function ClientBox({
       <style jsx>{`
         .box {
           width: 45%;
-          min-width: 250px;
+          min-width: 200px;
+          margin-bottom: 20px;
         }
         h3 {
           color: #1e3246;
-          text-align: center;
+          width: auto;
+          height: auto;
+          max-width: 200px;
+          margin: 0 auto;
         }
         img {
-          height: 75px;
+          height: auto;
+          width: 200px;
         }
       `}</style>
     </div>

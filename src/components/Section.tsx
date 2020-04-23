@@ -4,15 +4,18 @@ export default function Section({
   header,
   subheader,
   background = "white",
-  children
+  children,
 }: {
   header: string;
   subheader?: string;
   background?: string;
   children: JSX.Element | JSX.Element[];
 }) {
+  const formId = (string: string) => {
+    return string.toLowerCase().replace(/ /g, "-");
+  };
   return (
-    <section>
+    <section id={formId(header)}>
       <div className="content">
         <h2>{header}</h2>
         <h3>{subheader}</h3>

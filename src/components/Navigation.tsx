@@ -2,27 +2,25 @@ import Link from "next/link";
 
 const Navigation = () => {
   const handleToggle = (e: React.SyntheticEvent) => {
-    console.log(e.currentTarget.classList);
     e.currentTarget.classList.toggle("change");
-    const ul = document.querySelector("ul");
-    ul?.classList.toggle("expanded");
+    e.currentTarget.nextElementSibling!.classList.toggle("expanded");
   };
   return (
     <nav>
       <a href="#menu" aria-hidden="true" onClick={handleToggle}></a>
       <ul>
         <li>
-          <Link href="/services">
-            <a title="Services Page">our services</a>
+          <Link href="/#our-services">
+            <a title="go to our services section">our services</a>
           </Link>
         </li>
         <li>
-          <Link href="/clients">
-            <a title="Clients page">our work</a>
+          <Link href="/#our-clients">
+            <a title="go to our clients section">our clients</a>
           </Link>
         </li>
         <li>
-          <Link href="/contact">
+          <Link href="/#contact-us">
             <a title="Contact us">contact us</a>
           </Link>
         </li>
@@ -98,7 +96,9 @@ const Navigation = () => {
           }
           ul {
             display: none;
-            border-bottom-left-radius: 25px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: #00aaff 17px 12px 0px;
           }
           li {
             list-style: none;
