@@ -143,15 +143,12 @@ export default function Index() {
             imageUrl="/images/logos/react.svg"
           >
             <p>
-              ReactJS allows us to build blazing-fast user interfaces in a
-              highly-scalable style.
+              We build build blazing-fast user interfaces in a highly-scalable
+              style.
             </p>
           </ToolBox>
           <ToolBox header="Node.js" imageUrl="/images/logos/nodejs.svg">
-            <p>
-              JavaScript on the server means our teams can work be truly
-              fullstack developers
-            </p>
+            <p>We use Javascript on the Server and Client.</p>
           </ToolBox>
 
           <ToolBox

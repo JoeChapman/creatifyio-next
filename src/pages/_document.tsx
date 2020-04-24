@@ -15,6 +15,7 @@ class MyDocument extends Document {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <title>User focused web & product development</title>
         </Head>
         <body>
           <Main />
