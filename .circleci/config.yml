@@ -1,14 +1,4 @@
 jobs:
-  yarn:
-    docker:
-      - image: "cimg/base:stable"
-    steps:
-      - checkout
-      - node/install:
-          install-yarn: true
-          node-version: latest
-      - run: node --version
-
   build:
     executor:
       name: node/default
@@ -27,7 +17,6 @@ orbs:
 workflows:
   heroku_deploy:
     jobs:
-      - yarn
       - build
       - heroku/deploy-via-git:
         requires:
