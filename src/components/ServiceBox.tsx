@@ -26,12 +26,13 @@ export default function ServiceBox({
           margin-bottom: 0;
         }
         span {
-          padding-left: 4px;
+          padding-left: 15px;
+          font-size: 1.8rem;
         }
         img {
           width: 3.5rem;
           height: 40px;
-          vertical-align: text-top;
+          vertical-align: sub;
         }
       `}</style>
     </div>

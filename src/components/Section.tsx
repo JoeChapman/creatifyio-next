@@ -7,7 +7,7 @@ export default function Section({
   background = "white",
   children,
 }: {
-  header: string;
+  header?: string;
   subheader?: string;
   fragment?: string;
   background?: string;
@@ -22,7 +22,7 @@ export default function Section({
       </div>
       <style jsx>{`
         section {
-          background-color: ${background};
+          background: ${background};
           padding: 40px 0 100px;
         }
         h2 {

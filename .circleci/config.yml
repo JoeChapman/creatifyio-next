@@ -22,7 +22,7 @@ jobs:
 version: 2.1
 orbs:
   node: circleci/node@2.0.3
-  heroku: circleci/heroku@x.y
+  heroku: circleci/heroku@1.0.1
 
 workflows:
   heroku_deploy:

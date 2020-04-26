@@ -32,7 +32,7 @@ export default function Index() {
             }
           `}</style>
         </Banner>
-        <section>
+        <Section>
           <style jsx>{`
             section {
               background-color: #fff;
@@ -106,7 +106,7 @@ export default function Index() {
               </table>
             </div>
           </div>
-        </section>
+        </Section>
       </main>
     </Layout>
   );
