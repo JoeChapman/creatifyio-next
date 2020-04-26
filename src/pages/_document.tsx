@@ -15,7 +15,17 @@ class MyDocument extends Document {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <title>User focused web & product development</title>
+          <meta charSet="utf-8" />
+          <meta
+            name="description"
+            content="Creatify design and develop products for the web with high performance software
+      to solve complex business problems"
+          />
+          <meta
+            name="keywords"
+            content="web, develop, design, software, agile, javascript, html, css, node.js, react, aws"
+          />
+          <meta name="author" content="creatify.io" />
         </Head>
         <body>
           <Main />

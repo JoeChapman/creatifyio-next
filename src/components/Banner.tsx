@@ -12,9 +12,9 @@ const Banner = ({
     <style jsx>{`
       .banner {
         background-image: url(${imageUrl});
-        background-size: contain;
+        background-size: 35em;
         background-repeat: no-repeat;
-        background-position: right 200px top 0;
+        background-position: right 20% top 20%;
         background-blend-mode: multiply;
         background-color: #1e3246;
         color: white;
