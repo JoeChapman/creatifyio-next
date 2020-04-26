@@ -1,5 +1,5 @@
 jobs:
-  install-node:
+  yarn:
     docker:
       - image: "cimg/base:stable"
     steps:
@@ -27,10 +27,11 @@ orbs:
 workflows:
   heroku_deploy:
     jobs:
-      - install-node
+      - yarn
       - build
       - heroku/deploy-via-git:
         requires:
+          - yarn
           - build
         filters:
           branches:
