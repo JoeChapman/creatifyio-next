@@ -3,19 +3,18 @@ import { ReactChildren, ReactChild } from "react";
 export default function Section({
   header,
   subheader,
+  fragment,
   background = "white",
   children,
 }: {
   header: string;
   subheader?: string;
+  fragment?: string;
   background?: string;
   children: JSX.Element | JSX.Element[];
 }) {
-  const formId = (string: string) => {
-    return string.toLowerCase().replace(/ /g, "-");
-  };
   return (
-    <section id={formId(header)}>
+    <section id={fragment}>
       <div className="content">
         <h2>{header}</h2>
         <h3>{subheader}</h3>

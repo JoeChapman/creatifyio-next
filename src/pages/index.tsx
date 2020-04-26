@@ -25,9 +25,9 @@ export default function Index() {
             }
           `}</style>
         </Banner>
-        <Section header="Our Services" subheader="What we do">
+        <Section fragment="our-services" header="What we do" subheader="">
           <ServiceBox
-            header="Web Development"
+            header="Web & mobile development"
             imageUrl="/images/icons/develop-y.svg"
           >
             <p>
@@ -39,7 +39,7 @@ export default function Index() {
             </p>
           </ServiceBox>
           <ServiceBox
-            header="Cloud Engineering"
+            header="Cloud infrastructure engineering"
             imageUrl="/images/icons/cloud-y.svg"
           >
             <p>
@@ -50,7 +50,7 @@ export default function Index() {
             </p>
           </ServiceBox>
           <ServiceBox
-            header="Agile Delivery"
+            header="Project management"
             imageUrl="/images/icons/user-y.svg"
           >
             <p>
@@ -61,7 +61,7 @@ export default function Index() {
             </p>
           </ServiceBox>
           <ServiceBox
-            header="Support & Maintenance"
+            header="Support & maintenance"
             imageUrl="/images/icons/support-y.svg"
           >
             <p>
@@ -74,8 +74,9 @@ export default function Index() {
           </ServiceBox>
         </Section>
         <Section
-          header="Our Clients"
-          subheader="Who we've helped"
+          fragment="our-clients"
+          header="Who we've helped"
+          subheader=""
           background="#d6dce2"
         >
           <ClientBox
@@ -120,7 +121,7 @@ export default function Index() {
             </p>
           </ClientBox>
         </Section>
-        <Section header="The Tech Bit" subheader="Software we use">
+        <Section fragment="our-tools" header="Software we use" subheader="">
           <ToolBox header="AWS" imageUrl="/images/logos/aws.svg">
             <p>
               Reliable, secure and cost-effective platform designed to be

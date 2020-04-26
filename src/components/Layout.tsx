@@ -11,41 +11,12 @@ const Layout = ({ children }: { children: JSX.Element }) => (
   <div style={layoutStyle}>
     <Header />
     {children}
-    <style jsx global>{`
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica,
-          Arial, sans-serif;
-        font-size: 100%;
-        font-weight: 400;
-        -webkit-font-smoothing: antialiased;
-        line-height: 1.6;
-      }
 
-      p {
-        color: black;
-        font-size: 1.12rem;
-        line-height: 1.7;
-      }
-      main {
-        margin-top: 85px;
-      }
-      .row {
-        flex-flow: row wrap;
-        display: flex;
-        justify-content: space-between;
-      }
-      .content {
-        width: 65%;
-        margin: 0 auto;
-      }
-      .three {
-        width: 25%;
-      }
-    `}</style>
     <Footer />
-    <CookieConsent>
+    <CookieConsent
+      style={{ background: "black" }}
+      buttonStyle={{ color: "#4e503b", fontSize: "15px", borderRadius: "5px" }}
+    >
       We use{" "}
       <a
         href="http://www.bbc.co.uk/webwise/guides/about-cookies"
@@ -57,6 +28,11 @@ const Layout = ({ children }: { children: JSX.Element }) => (
       <a href="/cookies" target="cookies">
         cookie policy
       </a>
+      <style jsx>{`
+        a {
+          color: white;
+        }
+      `}</style>
     </CookieConsent>
   </div>
 );
