@@ -9,9 +9,11 @@
     "start": "next start -p $PORT"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.10",
     "@types/node": "^13.7.2",
     "@types/react": "^16.9.20",
-    "next": "^9.3.5",
+    "classnames": "^2.2.6",
+    "next": "^9.3.6",
     "react": "^16.12.0",
     "react-cookie-consent": "^3.0.0",
     "react-dom": "^16.12.0",

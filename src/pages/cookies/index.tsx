@@ -1,42 +1,22 @@
 import Layout from "../../components/Layout";
-import Banner from "../../components/Banner";
 import Section from "../../components/Section";
 
 export default function Index() {
   return (
     <Layout>
       <main>
-        <Banner imageUrl="/images/cre-illustrations-1.svg">
-          <h1>Our cookie Policy</h1>
-          <p>
-            www.creatify.io puts small files (known as ‘cookies’) <br />
-            onto your computer to collect information about how you <br />{" "}
-            browse the site. <br />
-            Find out more about the cookies we use, what they’re for <br /> and
-            when they expire.
-          </p>
+        <Section>
           <style jsx>{`
+            section {
+              background-color: #fff;
+              padding: 40px 0 100px;
+            }
             h1 {
               font-weight: 700;
               font-size: 3.2rem;
               line-height: 1.2;
               letter-spacing: -0.1rem;
               margin: 0.67em 0;
-            }
-
-            p {
-              color: white;
-              text-align: left;
-              margin: 0 0 2rem;
-              font-size: 1.7rem;
-            }
-          `}</style>
-        </Banner>
-        <Section>
-          <style jsx>{`
-            section {
-              background-color: #fff;
-              padding: 40px 0 100px;
             }
             h2 {
               color: #1e3246;
@@ -53,6 +33,15 @@ export default function Index() {
             }
           `}</style>
           <div className="column">
+            <div className="row">
+              <h1>Our cookie Policy</h1>
+              <p>
+                www.creatify.io puts small files (known as ‘cookies’) onto your
+                computer to collect information about how you browse the site.
+                Find out more about the cookies we use, what they’re for and
+                when they expire.
+              </p>
+            </div>
             <div className="row">
               <h2>Cookies that measure website use</h2>
               <p>

@@ -1,27 +1,83 @@
+import classNames from "classnames";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Router from "next/router";
 
 const Navigation = () => {
   const handleToggle = (e: React.SyntheticEvent) => {
     e.currentTarget.classList.toggle("change");
     e.currentTarget.nextElementSibling!.classList.toggle("expanded");
   };
+
+  const [path, setPath] = useState("");
+
+  const updatePath = () => {
+    setPath(Router.pathname + location.hash);
+    setTimeout(() => {
+      if (location.hash) {
+        location = location;
+      }
+    }, 0);
+  };
+
+  const hashChangeTo = (targetHash: string) => {
+    console.log(targetHash);
+    return () => {
+      if (targetHash === location.hash) return;
+
+      const detectHash = () => {
+        if (location.hash === targetHash) {
+          updatePath();
+        } else {
+          requestAnimationFrame(detectHash);
+        }
+      };
+      requestAnimationFrame(detectHash);
+    };
+  };
+
+  useEffect(() => {
+    hashChangeTo(location.hash);
+  }, [path]);
+
   return (
     <nav>
       <a href="#menu" aria-hidden="true" onClick={handleToggle}></a>
       <ul>
         <li>
           <Link href="/#our-services">
-            <a title="go to our services section">our services</a>
+            <a
+              onClick={hashChangeTo("#our-services")}
+              className={classNames({
+                active: path.includes("#our-services"),
+              })}
+            >
+              Services
+            </a>
           </Link>
         </li>
         <li>
           <Link href="/#our-clients">
-            <a title="go to our clients section">our clients</a>
+            <a
+              onClick={hashChangeTo("#our-clients")}
+              className={classNames({
+                active: path.includes("#our-clients"),
+              })}
+            >
+              Clients
+            </a>
           </Link>
         </li>
         <li>
           <Link href="/#contact-us">
-            <a title="Contact us">contact us</a>
+            <a
+              onClick={hashChangeTo("#contact-us")}
+              className={classNames({
+                active: path.includes("#contact-us"),
+              })}
+            >
+              Contact
+            </a>
           </Link>
         </li>
       </ul>
@@ -89,6 +145,9 @@ const Navigation = () => {
           line-height: normal;
           padding: 12px;
           font-size: 1.2rem;
+        }
+        a.active {
+          text-decoration: underline;
         }
         @media only screen and (max-width: 1000px) {
           a[href="#menu"] {
