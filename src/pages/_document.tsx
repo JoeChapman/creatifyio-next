@@ -18,14 +18,28 @@ class MyDocument extends Document {
           <meta charSet="utf-8" />
           <meta
             name="description"
-            content="Creatify design and develop products for the web with high performance software
-      to solve complex business problems"
+            content="Creatify is a community of experienced software consultants
+            specialising in delivering value to our customers"
           />
           <meta
             name="keywords"
-            content="web, develop, design, software, agile, javascript, html, css, node.js, react, aws"
+            content="web, develop, devops, design, software, agile, javascript, html, css, node.js, react, aws, cloud"
           />
           <meta name="author" content="creatify.io" />
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `<!-- Global site tag (gtag.js) - Google Analytics -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=UA-102439490-1"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+              
+                gtag('config', 'UA-102439490-1');
+              </script>
+              `,
+            }}
+          />
         </Head>
         <body>
           <Main />

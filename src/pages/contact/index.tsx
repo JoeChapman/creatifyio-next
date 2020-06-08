@@ -115,10 +115,11 @@ export default function Contact() {
               <div className="formRow">
                 <label htmlFor="interest">Your interests</label>
                 <select id="interest" required onChange={handleOnChange}>
-                  <option value="">Product management</option>
-                  <option value="">Software engineering</option>
-                  <option value="">Interaction design</option>
-                  <option value="">User research</option>
+                  <option value="product">Product management</option>
+                  <option value="software">Software engineering</option>
+                  <option value="design">Service design</option>
+                  <option value="research">User research</option>
+                  <option value="devops">DevOps & cloud</option>
                 </select>
               </div>
               <div className="formRow">
