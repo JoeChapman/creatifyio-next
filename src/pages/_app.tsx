@@ -13,11 +13,11 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
       <style jsx global>{`
         @font-face {
           font-family: oxygen-regular;
-          src: url(/fonts/oxygen/Oxygen-Light.ttf);
+          src: url(/fonts/oxygen/light.ttf);
         }
         @font-face {
           font-family: oxygen-bold;
-          src: url(/fonts/oxygen/Oxygen-Bold.ttf);
+          src: url(/fonts/oxygen/bold.ttf);
         }
         html,
         body,
