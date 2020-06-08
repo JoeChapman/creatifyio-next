@@ -50,23 +50,18 @@ export default function Services() {
               These tools also help us independently accomplish tasks that would
               otherwise have required help from other teams.
             </p>
-            <p>The benefits of this model are;</p>
-            <ul>
-              <li>Speed</li>
-              <li>Rapid Delivery</li>
-              <li>Reliability</li>
-              <li>Scale</li>
-              <li>Improved Collaboration</li>
-              <li>Security</li>
-            </ul>
+            <p>
+              The benefits of this model are; speed, rapid delivery,
+              reliability, scale, improved collaboration, and security.
+            </p>
           </ServiceBox>
           <ServiceBox
             header="DevOps & Cloud"
             imageUrl="/images/icons/cloud-y.svg"
           >
             <p>
-              The following are the DevOps best practices we use to realise the
-              benefits of a DevOps model
+              These are the DevOps practices we use to benefit from operating a
+              DevOps model.
             </p>
             <ul>
               <li>
@@ -106,10 +101,59 @@ export default function Services() {
             header="Service design"
             imageUrl="/images/icons/design-y.svg"
           >
-            <p></p>
+            <p>
+              The general principles of service design are to focus the
+              designer’s attention on generic requirements of all services. They
+              are complemented by principles that relate to process design,
+              organizational design, information design and technology design.
+            </p>
+            <p>
+              We like the following{" "}
+              <a href="https://www.gov.uk/guidance/government-design-principles">
+                Government Design Principles
+              </a>{" "}
+              so much we've adopted them.
+            </p>
+            <ol>
+              <li>
+                <strong>Start with user needs</strong> - identify user needs
+              </li>
+              <li>
+                <strong>Do less</strong> - don't reinvent the wheel
+              </li>
+              <li>
+                <strong>Design with data</strong> - let data drive
+                decision-making
+              </li>
+              <li>
+                <strong>Do the hard work to make it simple</strong> - consider
+                usability
+              </li>
+              <li>
+                <strong>Iterate. Then iterate again</strong> - make small
+                changes, and test them
+              </li>
+              <li>
+                <strong>This is for everyone</strong> - be inclusive
+              </li>
+              <li>
+                <strong>Understand context</strong> - how will it be used
+              </li>
+              <li>
+                <strong>Build digital services, not websites</strong> - more
+                than a web page
+              </li>
+              <li>
+                <strong>Be consistent, not uniform</strong> - be open to change
+              </li>
+              <li>
+                <strong>Make things open: it makes things better</strong> -
+                share your work, encourage feedback
+              </li>
+            </ol>
           </ServiceBox>
 
-          <ServiceBox
+          {/* <ServiceBox
             header="User research"
             imageUrl="/images/icons/user-y.svg"
           >
@@ -130,7 +174,7 @@ export default function Services() {
               <li>Rapid design sprints</li>
               <li>Users & stakeholders workshops</li>
             </ul>
-          </ServiceBox>
+          </ServiceBox> */}
         </Section>
       </main>
     </Layout>

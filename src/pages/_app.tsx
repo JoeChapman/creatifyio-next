@@ -41,7 +41,7 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
           font-family: oxygen-bold;
         }
         p,
-        ul li,
+        li,
         input,
         textarea,
         label,
