@@ -11,6 +11,20 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
       </Head>
       <Component {...pageProps} />
       <style jsx global>{`
+        @font-face {
+          font-family: oxygen-regular;
+          src: url(/fonts/oxygen/Oxygen-Light.ttf);
+        }
+        @font-face {
+          font-family: oxygen-bold;
+          src: url(/fonts/oxygen/Oxygen-Bold.ttf);
+        }
+        html,
+        body,
+        body > div,
+        body > div > div {
+          height: 100%;
+        }
         body {
           margin: 0;
           padding: 0;
@@ -21,14 +35,26 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
           -webkit-font-smoothing: antialiased;
           line-height: 1.6;
         }
-
-        p {
+        h1,
+        h2,
+        h3 {
+          font-family: oxygen-bold;
+        }
+        p,
+        ul li,
+        input,
+        textarea,
+        label,
+        button,
+        select,
+        td {
           color: black;
           font-size: 1.12rem;
           line-height: 1.7;
+          font-family: oxygen-regular;
         }
         main {
-          margin-top: 85px;
+          margin: 85px 0;
         }
         .row {
           flex-flow: row wrap;
@@ -39,8 +65,16 @@ function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
           width: 65%;
           margin: 0 auto;
         }
+        .half {
+          width: 45%;
+        }
         .three {
           width: 25%;
+        }
+        a:link,
+        a:active,
+        a:visited {
+          color: #00aaff;
         }
       `}</style>
     </>

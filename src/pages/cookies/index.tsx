@@ -31,28 +31,37 @@ export default function Index() {
               margin-top: 0;
               margin-bottom: 40px;
             }
+            th {
+              text-align: left;
+            }
+            td {
+              padding: 10px 60px 10px 0;
+            }
           `}</style>
           <div className="column">
             <div className="row">
-              <h1>Our cookie Policy</h1>
+              <h1>Cookies</h1>
               <p>
-                www.creatify.io puts small files (known as ‘cookies’) onto your
-                computer to collect information about how you browse the site.
-                Find out more about the cookies we use, what they’re for and
-                when they expire.
+                Cookies are small files we put onto your browser to collect
+                information about how you browse the site. Find out more about
+                the cookies we use, what they’re for and when they expire.
               </p>
             </div>
             <div className="row">
-              <h2>Cookies that measure website use</h2>
+              <p>
+                <strong>Cookies that measure website use</strong>
+              </p>
               <p>
                 We use Google Analytics software (Universal Analytics) to
-                collect anonymised information about how you use creatify.io. We
-                do this to help make sure the site is meeting the needs of its
-                users and to help us make improvements to the site.
+                collect anonymised information about how you use this website.
+                We do this to help make sure the site is meeting the needs of
+                its users and to help us make improvements to the site.
               </p>
             </div>
             <div className="row">
-              <h2>Google Analytics stores information about:</h2>
+              <p>
+                <strong>Google Analytics stores information about:</strong>
+              </p>
             </div>
             <div className="row">
               <ul>
@@ -62,8 +71,12 @@ export default function Index() {
                   them
                 </li>
                 <li>what you click on while you’re visiting the site</li>
-                Google Analytics sets the following cookies.
               </ul>
+            </div>
+            <div className="row">
+              <p>
+                <strong>Google Analytics sets the following cookies</strong>
+              </p>
             </div>
             <div className="row">
               <table>

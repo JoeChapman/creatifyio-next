@@ -1,187 +1,109 @@
 import Layout from "../components/Layout";
 import Section from "../components/Section";
-import ServiceBox from "../components/ServiceBox";
-import ClientBox from "../components/ClientBox";
 import Banner from "../components/Banner";
-import ToolBox from "../components/ToolBox";
+import ActiveLink from "../components/ActiveLink";
 
 export default function Index() {
   return (
     <Layout>
       <main>
-        <Banner imageUrl="/images/cre-illustrations-1.svg">
-          <h1>
-            We design and develop high performance software to solve complex
-            business problems
-          </h1>
-          <style jsx>{`
-            h1 {
-              font-weight: 700;
-              font-size: 3.2rem;
-              line-height: 1.2;
-              letter-spacing: -0.1rem;
-              margin: 0 0 3em;
-              max-width: 700px;
-            }
-          `}</style>
-        </Banner>
-        <Section fragment="our-services" header="What we do" subheader="">
-          <ServiceBox
-            header="Web & mobile development"
-            imageUrl="/images/icons/develop-y.svg"
-          >
+        <Section>
+          <div id="words" className="column">
+            <h1>
+              Creatify is a community of experienced software consultants
+              specialising in delivering value to our customers
+            </h1>
             <p>
-              We have over 15 years' experience developing software for the Web,
-              and the infrastructure and tooling to support it; including
-              Content Management Systems (CMS), custom design, and eCommerce. We
-              believe in the open-source community and benefit from all its
-              advantages, support and learning.
+              We thrive on delivering digital services to the highest quality
+              through user research, outcome validation, iterative Agile
+              delivery and cooperative product management.
             </p>
-          </ServiceBox>
-          <ServiceBox
-            header="Cloud infrastructure engineering"
-            imageUrl="/images/icons/cloud-y.svg"
-          >
-            <p>
-              As cloud engineers we evangelise DevOps best practices, with
-              senior commercial experience covering everything from identity and
-              access management, through container orchestration to service
-              monitoring.
-            </p>
-          </ServiceBox>
-          <ServiceBox
-            header="Project management"
-            imageUrl="/images/icons/user-y.svg"
-          >
-            <p>
-              Our goal is to understand what your users need, so they'll want to
-              keep them coming back. We believe with collaboration and
-              iteratively testing and refining, we'll develop the product most
-              appropriate for your requirements.
-            </p>
-          </ServiceBox>
-          <ServiceBox
-            header="Support & maintenance"
-            imageUrl="/images/icons/support-y.svg"
-          >
-            <p>
-              We use Site Reliability Engineering techniques to define
-              agreements with you that we implement and monitor for success,
-              enabling us to respond rapidly to support production issues. We
-              can maintain or migrate your legacy services and data to a new
-              platform.
-            </p>
-          </ServiceBox>
+            <ul>
+              <li>
+                Read more on how we{" "}
+                <ActiveLink href="/services" activeClassName="selected">
+                  <a>deliver digital services</a>
+                </ActiveLink>{" "}
+                to our customers
+              </li>
+              <li>
+                Find out who{" "}
+                <ActiveLink href="/customers" activeClassName="selected">
+                  <a>who we've helped</a>
+                </ActiveLink>{" "}
+                to realise their goals
+              </li>
+              <li>
+                Want to know how we could help you?{" "}
+                <ActiveLink href="/contact" activeClassName="selected">
+                  <a>Get in touch</a>
+                </ActiveLink>{" "}
+                and we can find out what your goals are
+              </li>
+            </ul>
+            <style jsx>{`
+              h1 {
+                font-weight: 700;
+                font-size: 3.2rem;
+                line-height: 1.2;
+                letter-spacing: -0.1rem;
+                max-width: 700px;
+              }
+              #words {
+                width: 50%;
+              }
+              @media only screen and (max-width: 1000px) {
+                #words {
+                  width: 100%;
+                }
+              }
+            `}</style>
+          </div>
+          <div id="image" className="column ">
+            <img src="/images/cre-illustrations-1.svg" />
+            <style jsx>{`
+              #image {
+                width: 50%;
+              }
+              @media only screen and (max-width: 1000px) {
+                #image {
+                  display: none;
+                  width: 0;
+                }
+              }
+            `}</style>
+          </div>
         </Section>
-        <Section
-          fragment="our-clients"
-          header="Who we've helped"
-          subheader=""
-          background="#d6dce2"
-        >
-          <ClientBox
-            imageAlt="Savvy Property Technology"
-            imageUrl="/images/logos/savvy.png"
-          >
+        <Section>
+          <div className="column">
+            <h2>We are a community</h2>
             <p>
-              We redeveloped a Mobile App and Web App for a work-based social
-              network, deployed multiple services to Kubernetes on AWS and
-              integrated the pipeline with Datadog to monitor the logs and
-              performance
+              Our community is a network of experts in software and digital
+              product development that scale as necessary to support each other
+              and get results. We've spent our time in the trenches together and
+              know what it takes to drive quality and standards that deliver
+              high value outcomes. We are proud to be able to depend on each
+              other to reach that goal.
             </p>
-          </ClientBox>
-          <ClientBox
-            imageAlt="Home Office"
-            imageUrl="/images/logos/home-office.png"
-          >
+            <h2>We are experienced</h2>
             <p>
-              Lead the development of multiple digital services through the GDS
-              service assessments embedded in a multi-disicplinary Agile team.
-              Open-sourced design-patterns and developed Home Office Forms
+              Our experiences at all levels of software delivery provide us with
+              a solid foundation of expertise to call upon. In short, we are
+              greater than the sum of our parts. From software engineering,
+              DevOps & Cloud, user research and service design, to product
+              management and interaction design, we're confident in our
+              capabilities.
             </p>
-          </ClientBox>
-          <ClientBox
-            imageAlt="Old Mutual"
-            imageUrl="/images/logos/old-mutual.png"
-          >
+            <h2>We take leadership seriously</h2>
             <p>
-              Engaged with senior stakeholders to transform elements of their
-              business, leading to developing and productionising a
-              content-discovery Chatbot and internal Lead Tracker service
+              We understand that a team needs to pull together and move in the
+              same direction to accomplish great things, and that individuals
+              need to space and time to grow. We belive the best way to do this
+              is by mapping the way and setting expectations, while coaching and
+              nudging others along the way, to unlock their potential.
             </p>
-          </ClientBox>
-          <ClientBox
-            imageAlt="British Gas"
-            imageUrl="/images/logos/british-gas.png"
-          >
-            <p>
-              Helped British Gas develop and release the first edition of the
-              Web App for Hive home thermostat. Created an accessible online
-              thermostat control, brochure site and pyament portal integration
-            </p>
-          </ClientBox>
+          </div>
         </Section>
-        <Section fragment="our-tools" header="Software we use" subheader="">
-          <ToolBox header="AWS" imageUrl="/images/logos/aws.svg">
-            <p>
-              Reliable, secure and cost-effective platform designed to be
-              scalable and highly-performant.
-            </p>
-          </ToolBox>
-          <ToolBox
-            title="ReactJS"
-            header="ReactJS"
-            imageUrl="/images/logos/react.svg"
-          >
-            <p>
-              We build build blazing-fast user interfaces in a highly-scalable
-              style.
-            </p>
-          </ToolBox>
-          <ToolBox header="Node.js" imageUrl="/images/logos/nodejs.svg">
-            <p>We use Javascript on the Server and Client.</p>
-          </ToolBox>
-
-          <ToolBox
-            title="Kubernetes"
-            header="Kubernetes"
-            imageUrl="/images/logos/kubernetes.svg"
-          >
-            <p>Scale resources and applications in real time.</p>
-          </ToolBox>
-        </Section>
-        <Banner id="contact-us" imageUrl="/images/cre-illustrations-2.svg">
-          <h2>Contact us</h2>
-          <p>
-            Email{" "}
-            <a href="mailto:hello@creatify.io" title="opens new email">
-              hello@creatify.io
-            </a>{" "}
-            or call{" "}
-            <a href="tel:07846233761" title="phone creatify ltd">
-              07864233761
-            </a>{" "}
-            to talk
-          </p>
-          <style jsx>{`
-            h2 {
-              font-weight: 700;
-              font-size: 3.2rem;
-              line-height: 1.2;
-              letter-spacing: -0.1rem;
-              margin: 0.67em 0;
-            }
-            p {
-              color: white;
-              text-align: left;
-              margin: 0 0 2rem;
-              font-size: 1.7rem;
-            }
-            a {
-              color: white;
-            }
-          `}</style>
-        </Banner>
       </main>
     </Layout>
   );

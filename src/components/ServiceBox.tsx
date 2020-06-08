@@ -5,7 +5,7 @@ export default function ServiceBox({
 }: {
   header: string;
   imageUrl: string;
-  children: JSX.Element;
+  children: JSX.Element | JSX.Element[];
 }) {
   return (
     <div className="box">

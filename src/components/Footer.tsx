@@ -1,5 +1,5 @@
-import Link from "next/link";
 import FootNote from "./FootNote";
+import ActiveLink from "./ActiveLink";
 
 const Footer = () => (
   <footer>
@@ -11,19 +11,24 @@ const Footer = () => (
         <h3>Site</h3>
         <ul>
           <li>
-            <Link href="/#our-services">
-              <a title="Services Page">Services</a>
-            </Link>
+            <ActiveLink href="/" activeClassName="selected">
+              <a>About us</a>
+            </ActiveLink>
           </li>
           <li>
-            <Link href="/#our-clients">
-              <a title="Clients page">Clients</a>
-            </Link>
+            <ActiveLink href="/services" activeClassName="selected">
+              <a>Our services</a>
+            </ActiveLink>
           </li>
           <li>
-            <Link href="/#contact-us">
-              <a title="Contact us">Contact</a>
-            </Link>
+            <ActiveLink href="/customers" activeClassName="selected">
+              <a>Our customers</a>
+            </ActiveLink>
+          </li>
+          <li>
+            <ActiveLink href="/contact" activeClassName="selected">
+              <a>Contact us</a>
+            </ActiveLink>
           </li>
         </ul>
       </div>
@@ -31,45 +36,10 @@ const Footer = () => (
         <h3>Legal stuff</h3>
         <ul>
           <li>
-            <a href="./cookies">Cookie Policy</a>
+            <a href="./cookies">Cookies</a>
           </li>
           <li>
-            <a href="./terms">Terms & Conditions</a>
-          </li>
-        </ul>
-      </div>
-      <div className="columns">
-        <ul>
-          <li>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/creatify-limited-813746145/"
-              title="Linkedin"
-            >
-              <img
-                src="/images/logos/linkedin.svg"
-                width="30px"
-                alt="linkedin"
-              />
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://github.com/JoeChapman"
-              title="Github"
-            >
-              <img src="/images/logos/github.svg" width="30px" alt="github" />
-            </a>
-          </li>
-          <li>
-            <a
-              target="_blank"
-              href="https://twitter.com/social_creatify"
-              title="Twitter"
-            >
-              <img src="/images/logos/twitter.svg" width="30px" alt="twitter" />
-            </a>
+            <a href="./privacy">Privacy</a>
           </li>
         </ul>
       </div>
@@ -100,8 +70,11 @@ const Footer = () => (
           color: white;
           text-decoration: none;
           line-height: normal;
-          padding: 12px 0;
+
           font-size: 1.2rem;
+        }
+        li a.selected {
+          text-decoration: underline;
         }
       `}
     </style>

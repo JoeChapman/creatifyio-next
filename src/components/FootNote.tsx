@@ -16,7 +16,7 @@ export default function FootNote({
             margin-top: 200px;
           }
           p {
-            font-size: 80%;
+            font-size: 85%;
             margin: 0 auto;
           }
         `}

@@ -1,84 +1,34 @@
-import classNames from "classnames";
-import { useState, useEffect } from "react";
 import Link from "next/link";
-import Router from "next/router";
+import ActiveLink from "./ActiveLink";
 
 const Navigation = () => {
   const handleToggle = (e: React.SyntheticEvent) => {
     e.currentTarget.classList.toggle("change");
-    e.currentTarget.nextElementSibling!.classList.toggle("expanded");
+    e.currentTarget.parentElement!.classList.toggle("expanded");
   };
-
-  const [path, setPath] = useState("");
-
-  const updatePath = () => {
-    setPath(Router.pathname + location.hash);
-    setTimeout(() => {
-      if (location.hash) {
-        location = location;
-      }
-    }, 0);
-  };
-
-  const hashChangeTo = (targetHash: string) => {
-    console.log(targetHash);
-    return () => {
-      if (targetHash === location.hash) return;
-
-      const detectHash = () => {
-        if (location.hash === targetHash) {
-          updatePath();
-        } else {
-          requestAnimationFrame(detectHash);
-        }
-      };
-      requestAnimationFrame(detectHash);
-    };
-  };
-
-  useEffect(() => {
-    hashChangeTo(location.hash);
-  }, [path]);
-
   return (
     <nav>
       <a href="#menu" aria-hidden="true" onClick={handleToggle}></a>
       <ul>
         <li>
-          <Link href="/#our-services">
-            <a
-              onClick={hashChangeTo("#our-services")}
-              className={classNames({
-                active: path.includes("#our-services"),
-              })}
-            >
-              Services
-            </a>
-          </Link>
+          <ActiveLink href="/" activeClassName="selected">
+            <a>About us</a>
+          </ActiveLink>
         </li>
         <li>
-          <Link href="/#our-clients">
-            <a
-              onClick={hashChangeTo("#our-clients")}
-              className={classNames({
-                active: path.includes("#our-clients"),
-              })}
-            >
-              Clients
-            </a>
-          </Link>
+          <ActiveLink href="/services" activeClassName="selected">
+            <a>Our services</a>
+          </ActiveLink>
         </li>
         <li>
-          <Link href="/#contact-us">
-            <a
-              onClick={hashChangeTo("#contact-us")}
-              className={classNames({
-                active: path.includes("#contact-us"),
-              })}
-            >
-              Contact
-            </a>
-          </Link>
+          <ActiveLink href="/customers" activeClassName="selected">
+            <a>Our customers</a>
+          </ActiveLink>
+        </li>
+        <li>
+          <ActiveLink href="/contact" activeClassName="selected">
+            <a>Contact us</a>
+          </ActiveLink>
         </li>
       </ul>
 
@@ -86,6 +36,7 @@ const Navigation = () => {
         nav {
           position: absolute;
           right: 0;
+          height: 100%;
         }
         a[href="#menu"] {
           display: none;
@@ -96,7 +47,7 @@ const Navigation = () => {
           content: "";
           right: 0;
           width: 0.25em;
-          border-top: 0.125em solid #fff;
+          border-top: 0.125em solid #1f3346;
           transition: all 0.2s ease-in-out;
         }
         a[href="#menu"]::before {
@@ -106,7 +57,7 @@ const Navigation = () => {
           width: 1em;
           height: 0.125em;
           top: 0.25em;
-          border-top: 0.125em solid #fff;
+          border-top: 0.125em solid #1f3346;
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
         }
@@ -117,7 +68,7 @@ const Navigation = () => {
           right: 0;
           width: 1em;
           height: 0.5em;
-          border-bottom: 0.125em solid #fff;
+          border-bottom: 0.125em solid #1f3346;
           -webkit-transition: all 0.2s ease-in-out;
           transition: all 0.2s ease-in-out;
         }
@@ -134,20 +85,25 @@ const Navigation = () => {
         }
         ul {
           display: flex;
+          margin: 0;
+          height: 100%;
         }
         li {
           list-style: none;
           display: inline-flex;
         }
-        a {
-          color: white;
+        a:link,
+        a:active,
+        a:visited {
+          color: #1f3346;
           text-decoration: none;
-          line-height: normal;
+          line-height: 3.4;
           padding: 12px;
           font-size: 1.2rem;
         }
-        a.active {
+        a.selected {
           text-decoration: underline;
+          color: #00aaff;
         }
         @media only screen and (max-width: 1000px) {
           a[href="#menu"] {
@@ -155,9 +111,6 @@ const Navigation = () => {
           }
           ul {
             display: none;
-            border-bottom-left-radius: 10px;
-            border-bottom-right-radius: 10px;
-            box-shadow: #00aaff 17px 12px 0px;
           }
           li {
             list-style: none;
@@ -171,10 +124,14 @@ const Navigation = () => {
           a:hover {
             text-decoration: underline;
           }
-          ul.expanded {
+          nav.expanded {
+            position: relative;
+          }
+          nav.expanded ul {
+            height: auto;
             display: block;
-            background-color: #1e3246;
-            margin-top: 70px;
+            background-color: #fff;
+            margin-top: 79px;
           }
         }
       `}</style>
