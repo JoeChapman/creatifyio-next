@@ -38,6 +38,28 @@ const Navigation = () => {
           right: 0;
           height: 100%;
         }
+        ul {
+          display: flex;
+          margin: 0;
+          height: 100%;
+        }
+        li {
+          list-style: none;
+          display: inline-flex;
+        }
+        li a:link,
+        li a:active,
+        li a:visited {
+          color: #1f3346;
+          text-decoration: none;
+          line-height: 3.4;
+          padding: 12px;
+          font-size: 1.2rem;
+        }
+        li a.selected {
+          text-decoration: underline;
+          color: #00aaff;
+        }
         a[href="#menu"] {
           display: none;
           position: absolute;
@@ -47,6 +69,7 @@ const Navigation = () => {
           content: "";
           right: 0;
           width: 0.25em;
+          padding: 12px;
           border-top: 0.125em solid #1f3346;
           transition: all 0.2s ease-in-out;
         }
@@ -83,28 +106,6 @@ const Navigation = () => {
           -webkit-transform: rotate(90deg) translate(-14px, -9px);
           transform: rotate(90deg) translate(-14px, -9px);
         }
-        ul {
-          display: flex;
-          margin: 0;
-          height: 100%;
-        }
-        li {
-          list-style: none;
-          display: inline-flex;
-        }
-        a:link,
-        a:active,
-        a:visited {
-          color: #1f3346;
-          text-decoration: none;
-          line-height: 3.4;
-          padding: 12px;
-          font-size: 1.2rem;
-        }
-        a.selected {
-          text-decoration: underline;
-          color: #00aaff;
-        }
         @media only screen and (max-width: 1000px) {
           a[href="#menu"] {
             display: block;
@@ -121,7 +122,16 @@ const Navigation = () => {
             display: block;
             line-height: 1.5;
           }
-          a:hover {
+          nav.expanded ul li a:link,
+          nav.expanded ul li a:active,
+          nav.expanded ul li a:visited {
+            color: #1f3346;
+            text-decoration: none;
+            line-height: 2.4;
+            padding: 5px;
+            font-size: 1.2rem;
+          }
+          li a:hover {
             text-decoration: underline;
           }
           nav.expanded {
@@ -132,6 +142,7 @@ const Navigation = () => {
             display: block;
             background-color: #fff;
             margin-top: 79px;
+            margin-bottom: 50px;
           }
         }
       `}</style>
