@@ -8,11 +8,8 @@ export default function Index() {
     <Layout>
       <main>
         <Section>
-          <div id="words" className="column">
-            <h1>
-              Creatify is a community of experienced software consultants
-              specialising in delivering value to our customers
-            </h1>
+          <div id="tagline" className="column">
+            <h1>Agile software developers delivering valuable outcomes</h1>
             <p>
               We thrive on delivering digital services to the highest quality
               through user research, outcome validation, iterative Agile
@@ -49,12 +46,15 @@ export default function Index() {
                 letter-spacing: -0.1rem;
                 max-width: 700px;
               }
-              #words {
+              #tagline {
                 width: 50%;
               }
               @media only screen and (max-width: 1000px) {
-                #words {
+                #tagline {
                   width: 100%;
+                }
+                h1 {
+                  font-size: 2.2rem;
                 }
               }
             `}</style>
@@ -79,11 +79,11 @@ export default function Index() {
             <h2>We are a community</h2>
             <p>
               Our community is a network of experts in software and digital
-              product development that scale as necessary to support each other
-              and get results. We've spent our time in the trenches together and
-              know what it takes to drive quality and standards that deliver
-              high value outcomes. We are proud to be able to depend on each
-              other to reach that goal.
+              product development that scale as necessary to support and
+              challenge each other to build results. We've spent our time in the
+              trenches together and know what it takes to drive quality and
+              standards that deliver high value outcomes. We are proud to be
+              able to depend on each other to reach that goal.
             </p>
             <h2>We are experienced</h2>
             <p>
