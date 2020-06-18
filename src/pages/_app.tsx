@@ -1,12 +1,23 @@
 import Head from "next/head";
+import { useAnalytics } from "../hooks/useAnalytics";
+import { useEffect } from "react";
+import { Router } from "next/router";
 
 function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
+  const { init, trackPageViewed } = useAnalytics();
+  useEffect(() => {
+    init(process.env.GA_ID!);
+    trackPageViewed();
+    Router.events.on("routeChangeComplete", () => {
+      trackPageViewed();
+    });
+  }, []);
+
   return (
     <>
       <Head>
         <title>
-          Creatify - Agile Web development, solutions design, and cloud platform
-          engineering
+          Creatify - Agile software developers delivering valuable outcomes
         </title>
       </Head>
       <Component {...pageProps} />

@@ -1,33 +1,71 @@
 import Link from "next/link";
 import ActiveLink from "./ActiveLink";
+import { useAnalytics } from "../hooks/useAnalytics";
 
 const Navigation = () => {
   const handleToggle = (e: React.SyntheticEvent) => {
     e.currentTarget.classList.toggle("change");
     e.currentTarget.parentElement!.classList.toggle("expanded");
   };
+  const { trackEvent } = useAnalytics();
   return (
     <nav>
       <a href="#menu" aria-hidden="true" onClick={handleToggle}></a>
       <ul>
         <li>
           <ActiveLink href="/" activeClassName="selected">
-            <a>About us</a>
+            <a
+              onClick={() => {
+                trackEvent({
+                  action: "Clicked About us",
+                  category: "Navigation",
+                });
+              }}
+            >
+              About us
+            </a>
           </ActiveLink>
         </li>
         <li>
           <ActiveLink href="/services" activeClassName="selected">
-            <a>Our services</a>
+            <a
+              onClick={() => {
+                trackEvent({
+                  action: "Clicked Our services",
+                  category: "Navigation",
+                });
+              }}
+            >
+              Our services
+            </a>
           </ActiveLink>
         </li>
         <li>
           <ActiveLink href="/customers" activeClassName="selected">
-            <a>Our customers</a>
+            <a
+              onClick={() => {
+                trackEvent({
+                  action: "Clicked Our customers",
+                  category: "Navigation",
+                });
+              }}
+            >
+              Our customers
+            </a>
           </ActiveLink>
         </li>
         <li>
           <ActiveLink href="/contact" activeClassName="selected">
-            <a>Contact us</a>
+            <a
+              onClick={() => {
+                trackEvent({
+                  action: "Clicked Contact us",
+                  category: "Navigation",
+                });
+              }}
+            >
+              Contact us
+            </a>
           </ActiveLink>
         </li>
       </ul>
