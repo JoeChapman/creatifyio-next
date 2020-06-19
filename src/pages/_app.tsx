@@ -6,7 +6,7 @@ import { Router } from "next/router";
 function MyApp({ Component, pageProps }: { Component: any; pageProps: any }) {
   const { init, trackPageViewed } = useAnalytics();
   useEffect(() => {
-    init(process.env.GA_ID!);
+    init("UA-102439490-1");
     trackPageViewed();
     Router.events.on("routeChangeComplete", () => {
       trackPageViewed();
